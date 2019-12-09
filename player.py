@@ -12,7 +12,7 @@ class Player:
 
         if our_hand[0] == our_hand[1]:
             return 500
-        return 250
+        return 2
 
     def showdown(self, game_state):
         sys.stdout(game_state)
