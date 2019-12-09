@@ -21,13 +21,17 @@ class Player:
             if row["name"] == "NAND":
                 our_hand.append(row["hole_cards"][0]["rank"])
                 our_hand.append(row["hole_cards"][1]["rank"])
+        bets = []
+        for player in game_state["players"]:
+            if player["name"] != "NAND":
+                bets.append(player["bet"])
 
         if our_hand[0] == our_hand[1] or our_hand[0] in community_cards or our_hand[1] in community_cards: # pair in hand or in community cards
-            return 6000
+            return max(bets)
         if our_hand[0] in community_cards and our_hand[1] in community_cards:
-            return 6000
+            return max(bets)
 
-        return 100
+        return 0
 
     def showdown(self, game_state):
         pass
