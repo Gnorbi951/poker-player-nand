@@ -3,7 +3,6 @@ import cgi
 import json
 import BaseHTTPServer
 import os
-import sys
 from player import Player
 
 
@@ -28,8 +27,6 @@ class PlayerService(BaseHTTPServer.BaseHTTPRequestHandler):
         else:
             postvars = {}
 
-        print >> sys.stderr, postvars
-        exit()
 
         action = postvars['action'][0]
 
