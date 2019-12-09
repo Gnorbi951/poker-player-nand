@@ -31,7 +31,7 @@ class Player:
         if our_hand[0] in community_cards and our_hand[1] in community_cards:
             return 750 if max(bets) < 750 else max(bets)
 
-        if game_state["round"] == 1 and (our_hand[0] != our_hand[1] or our_hand[0] not in community_cards or
+        if game_state["round"] == 2 and (our_hand[0] != our_hand[1] or our_hand[0] not in community_cards or
                                          our_hand[1] not in community_cards):
             return 0
 
