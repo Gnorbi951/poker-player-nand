@@ -31,7 +31,7 @@ class Player:
         if our_hand[0] in community_cards and our_hand[1] in community_cards:
             return 750 if max(bets) < 750 else max(bets)
 
-        return 15
+        return 16
 
     def showdown(self, game_state):
         pass
