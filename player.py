@@ -1,4 +1,4 @@
-import sys
+import logging
 
 class Player:
     VERSION = "1.0"
@@ -24,7 +24,7 @@ class Player:
         return 250
 
     def showdown(self, game_state):
-        sys.stdout(game_state)
+        logging.warning(game_state)
         # check our cards
 
 
