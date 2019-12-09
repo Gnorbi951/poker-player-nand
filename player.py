@@ -7,9 +7,6 @@ class Player:
         return 250
 
     def showdown(self, game_state):
-        with open('log.csv', 'w') as csvfile:
-            writer = csv.writer(csvfile, delimiter=' ')
-            for row in game_state:
-                writer.writerow(row)
+        print(game_state)
         pass
 
