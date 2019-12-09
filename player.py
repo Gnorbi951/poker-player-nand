@@ -11,5 +11,15 @@ class Player:
             writer = csv.writer(csvfile, delimiter=' ')
             for row in game_state:
                 writer.writerow(row)
-        pass
+
+        # check our cards
+        our_hand = []
+        for row in game_state["players"]:
+            if row["name"] == "NAND":
+                our_hand.append(row["hole_cards"][0]["rank"])
+                our_hand.append(row["hole_cards"][1]["rank"])
+
+        if our_hand[0] == our_hand[1]:
+            return 500
+
 
