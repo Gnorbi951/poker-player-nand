@@ -1,4 +1,4 @@
-import csv
+import sys
 
 class Player:
     VERSION = "1.0"
@@ -7,6 +7,6 @@ class Player:
         return 250
 
     def showdown(self, game_state):
-        print(game_state)
+        sys.stdout(game_state)
         pass
 
