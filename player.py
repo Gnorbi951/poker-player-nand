@@ -11,6 +11,8 @@ class Player:
                 community_cards.append(card[0]["rank"])
                 community_cards.append(card[1]["rank"])
                 community_cards.append(card[2]["rank"])
+                community_cards.append(card[3]["rank"])
+                community_cards.append(card[4]["rank"])
         except:
             pass
 
