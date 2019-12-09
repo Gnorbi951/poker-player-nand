@@ -27,11 +27,11 @@ class Player:
                 bets.append(player["bet"])
 
         if our_hand[0] == our_hand[1] or our_hand[0] in community_cards or our_hand[1] in community_cards: # pair in hand or in community cards
-            return max(bets)
+            return 750 if max(bets) < 750 else max(bets)
         if our_hand[0] in community_cards and our_hand[1] in community_cards:
-            return max(bets)
+            return 750 if max(bets) < 750 else max(bets)
 
-        return 0
+        return 15
 
     def showdown(self, game_state):
         pass
