@@ -3,6 +3,7 @@ import cgi
 import json
 import BaseHTTPServer
 import os
+import sys
 from player import Player
 
 
@@ -26,6 +27,9 @@ class PlayerService(BaseHTTPServer.BaseHTTPRequestHandler):
             postvars = cgi.parse_qs(self.rfile.read(length), keep_blank_values=1)
         else:
             postvars = {}
+
+        print >> sys.stderr, postvars
+        exit()
 
         action = postvars['action'][0]
 
