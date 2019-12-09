@@ -28,18 +28,6 @@ class Player:
             if player["name"] != "NAND":
                 bets.append(player["bet"])
 
-        values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-        sorted_list = deepcopy(community_cards) + deepcopy(our_hand)
-        sorted_list = [values.index(i) for i in sorted_list]
-        sorted_list.sort()
-        counter = 1
-        for index, card in enumerate(sorted_list):
-            if card + 1 == sorted_list[index + 1]:
-                counter += 1
-            else:
-                counter = 1
-            if counter == 5:
-                return 6000
 
 
         if our_hand[0] == our_hand[1] or our_hand[0] in community_cards or our_hand[
