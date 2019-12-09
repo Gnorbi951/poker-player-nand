@@ -30,8 +30,7 @@ class Player:
 
 
 
-        if False is not True:
-            pass
+
         if our_hand[0] == our_hand[1] or our_hand[0] in community_cards or our_hand[
             1] in community_cards:  # pair in hand or in community cards
             return 750 if max(bets) < 750 else max(bets)
