@@ -19,8 +19,11 @@ class Player:
                 our_hand.append(row["hole_cards"][0]["rank"])
                 our_hand.append(row["hole_cards"][1]["rank"])
 
-        if our_hand[0] == our_hand[1] or our_hand[0] in community_cards or our_hand[1] in community_cards :
+        if our_hand[0] == our_hand[1] or our_hand[0] in community_cards or our_hand[1] in community_cards: # pair in hand or in community cards
             return 750
+        if our_hand[0] in community_cards and our_hand[1] in community_cards:
+            return 1000
+
         return 250
 
     def showdown(self, game_state):
