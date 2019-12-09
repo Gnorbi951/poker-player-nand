@@ -4,7 +4,6 @@ class Player:
     VERSION = "1.0"
 
     def betRequest(self, game_state):
-        logging.warning(game_state)
         our_hand = []
         community_cards = []
         try:
