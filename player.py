@@ -35,7 +35,7 @@ class Player:
                                          our_hand[1] not in community_cards):
             return 0
 
-        return 16
+        return 40
 
     def showdown(self, game_state):
         pass
